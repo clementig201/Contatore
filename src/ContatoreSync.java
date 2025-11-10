@@ -5,6 +5,7 @@ public class ContatoreSync {
     public void increment() {
         synchronized (lock) {
             count++;
+            //devo fare un ciclo
         }
     }
 
