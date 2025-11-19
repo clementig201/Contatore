@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
+        // il main è un thread
         Contatore counter = new Contatore();
-
+        // il comportamento di un thread si trova dentro la funzione run di runnable
         // Create multiple threads to increment the counter
         Thread t1 = new Thread(() -> counter.increment());
         Thread t2 = new Thread(() -> counter.increment());
@@ -20,8 +21,8 @@ public class Main {
         ContatoreSync example = new ContatoreSync();
 
 // Create multiple threads to increment the counter
-        Thread t3 = new Thread(() -> example.increment());
-        Thread t4 = new Thread(() -> example.increment());
+        Thread t3 = new Thread(() -> example.incrementS());
+        Thread t4 = new Thread(() -> example.incrementS());
 
         t3.start();
         t4.start();
